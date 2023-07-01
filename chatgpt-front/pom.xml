@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hncboy</groupId>
-        <artifactId>chatgpt-web-java</artifactId>
+        <artifactId>chatgpt-vercel-selenium</artifactId>
         <version>${revision}</version>
     </parent>
     <artifactId>chatgpt-front</artifactId>
