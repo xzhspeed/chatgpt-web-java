@@ -8,15 +8,19 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SeleniumTest {
 
     public static void main(String[] args) throws InterruptedException {
 //配置浏览器驱动地址
         System.setProperty("webdriver.chrome.driver",
-                "D:\\Temp\\chromedriver.exe");
+                "H:\\JavaCodes\\chromedriver_win32\\chromedriver.exe");
+
 //打开Chrome浏览器
-        WebDriver webDriver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        ChromeDriver webDriver = new ChromeDriver(options);
         TimeUnit.SECONDS.sleep(5);
 //打开百度网站
         webDriver.get("https://www.baidu.com");
